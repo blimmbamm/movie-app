@@ -2,9 +2,11 @@
 
 I created this MPA movie web app to showcase my React skills. The app is implemented in JavaScript, using React and React Router libraries and basic CSS for styling. 
 
+I hosted the web app on firebase, you can view it here: [https://react-movie-app-a805a.web.app/](https://react-movie-app-a805a.web.app/). IMPORTANT NOTE: The app talks to a backend that is hosted on Render via a free instance, so Render spins down that service after 15 minutes of inactivity. Thus, initial loading of the page may take some seconds.
+
 ## Technical description
 
-The data displayed is (indirectly) coming from [TMDB](https://www.themoviedb.org/) by calling their API. Since the API uses an API key for authentication (which I want to and should keep secret), I implemented a simple backend API in Express.js, which basically just adds my API key to the request and then forwards it to the [TMDB API](https://developer.themoviedb.org/docs). You can check out the backend API project [here]().
+The data displayed is (indirectly) coming from [TMDB](https://www.themoviedb.org/) by calling their API. Since the API uses an API key for authentication (which I want to and should keep secret), I implemented a simple backend API in Express.js, which basically just adds my API key to the request and then forwards it to the [TMDB API](https://developer.themoviedb.org/docs). You can check out the backend API project [here](https://github.com/blimmbamm/movie-app-tmdb-proxy).
 
 The app is structured in components, mostly created by myself. For the multi range slider on the search page, I used an [implementation by Govind Gupta](https://www.npmjs.com/package/multi-range-slider-react), for the rating stars input element I used the implementation I found [here](https://www.npmjs.com/package/react-simple-star-rating). Some of the components are generic UI elements and are reused throughout the application.
 

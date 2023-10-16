@@ -4,8 +4,10 @@ const HEADER = {
   "Content-Type": "application/json",
 };
 
-const BACKEND_URL =
-  "http://movie-app-tmdb-proxy-env-1.eba-q2wpn7ua.us-east-1.elasticbeanstalk.com";
+// const BACKEND_URL =
+//   "http://movie-app-tmdb-proxy-env-1.eba-q2wpn7ua.us-east-1.elasticbeanstalk.com";
+const BACKEND_URL = 
+  "https://movie-app-tmdb-proxy.onrender.com/"
 
 async function fetchTmdbData(url, method, searchParams, body) {
   const tmdbUrl = new URL(url);
