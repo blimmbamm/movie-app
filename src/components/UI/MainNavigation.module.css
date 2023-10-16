@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: rgb(219, 245, 223);
+}
+
+.sticky {
+  z-index: 10;
+  top: 0;
+  position: sticky;
+}
+
+.navbar a {
+  margin: 1rem;
+  text-decoration: none;
+  color: rgb(122, 122, 122);
+}
+
+a.active {
+  color: rgb(2, 2, 2);
+}

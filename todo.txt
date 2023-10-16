@@ -1,0 +1,33 @@
+Offen:
+
+- Error information (not found or failed to fetch or other...); braucht man auch die Response bei fetchTmdbData
+- Person fetcher debouncen
+
+Erledigt: 
+- check if search works if no results found
+- all results loaded anpassen auf loaded >= total (falls keine Ergebnisse vorhanden)
+- value || alt_value Logik benutzen, 
+- movieRating zu userRating umbenennen falls es solches ist
+- Ratings: sortieren von aktuellste zu älteste
+- Watchlist entfernen
+- Profile Navbar schöner machen, und ändern, dass sie sich über die Haupt-Navbar legt beim scrollen, vielleicht sollte sie auch fixed drunter bleiben?
+- Filter Release year lte auf jetziges Datum stellen, nicht 01.01.2023, sonst werden aktuelle Filme nicht angezeigt
+- Rating stars nicht interagierbar machen wenn nicht eingeloggt (betrifft Suche und ggf. auch Home?)
+- Home Movies anzeigen, auch wenn nicht eingeloggt (hier gibt es Fehler weil Ratings nur geladen werden können wenn authentifiziert)
+- Loading modal machen bei Rating abgeben auf Home seite
+- Profile information verschönern
+- Ratings: load more Logik einbauen (Logik von Home/Search recyclen) + Button deaktivieren wenn es nicht mehr Ratings gibt
+- in Search: onFetchMovies umbennen zu onNewSearch
+- force Research
+- Loading modal when fetching new results (all places)
+- Search und TopMovies: Logik implementieren, dass load more nur geht, so lange nicht alles geladen ist
+- Rating Infos zu Search Ergebnissen hinzufügen falls vorhanden (Logik von TopMovies recyclen)
+- Was passiert mit totalPages in util/loadMoreResults wenn Daten nicht per Loader geladen werden? Müsste der Fall sein, bei Search
+- You're not logged in, so no need to logout! --> kommt bei Logout wenn als Gast eingeloggt
+- Link-Buttons und normale Buttons optisch angleichen
+- Search: Person Ergebnisse auf Schauspieler beschränken
+- Guest session option
+- Man könnte add/delete action in Main Layout machen
+- move util organisieren
+- allResultsLoaded nutzen statt if-check in handler
+- Footer in Error element einfügen

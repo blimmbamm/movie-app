@@ -1,0 +1,28 @@
+.button {
+  /* margin: auto; */
+  /* width: fit-content; */
+  padding: 0.75rem;
+  border: none;
+  background-color: rgb(85, 129, 85);
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  color: rgb(240, 240, 240);
+}
+
+.button:hover {
+  background-color: rgb(56, 92, 56);
+}
+
+.button:active {
+  box-shadow: 0 0 3px rgb(62, 94, 62);
+}
+
+/* .nav-button {
+  margin: 1rem;
+  text-decoration: none;
+  color: rgb(122, 122, 122);
+  background-color: transparent;
+  border: none;
+} */

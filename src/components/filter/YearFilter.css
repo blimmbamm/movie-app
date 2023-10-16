@@ -1,0 +1,199 @@
+.slider * {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+.slider {
+	display: flex;
+	position: relative;
+	margin: 0 1rem;
+	padding: 0.75rem 10px 0.5rem 10px ;
+	flex-direction: column;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge,*/
+}
+.slider .bar {
+	display: flex;
+}
+.slider .bar-left {
+	width: 25%;
+	background-color: #d8d8d8;
+	border-radius: 10px 0px 0px 10px;
+	padding: 4px 0px;
+}
+.slider .bar-right {
+	width: 25%;
+	background-color: #d8d8d8;
+	border-radius: 0px 10px 10px 0px;
+}
+.slider .bar-inner {
+	background-color: rgb(123, 194, 123);
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 1;
+	justify-content: space-between;
+	position: relative;
+	justify-content: space-between;
+}
+.slider .bar-inner-left {
+	width: 50%;
+}
+.slider .bar-inner-right {
+	width: 50%;
+}
+.slider .thumb {
+	background-color: white;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+}
+.slider .thumb::before {
+	content: '';
+	background-color: inherit;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border: solid 1px rgb(122, 122, 122);
+	border-radius: 50%;
+	z-index: 1;
+	margin: -4px -8px;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.slider .caption {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: visible;
+	display: none;
+}
+.slider .thumb .caption * {
+	position: absolute;
+	bottom: 8px;
+	font-size: 0.75rem;
+	text-align: center;
+	background-color: rgb(81, 124, 81);
+	border-radius: 8px;
+	color: white;
+	padding: 4px 4px;
+	white-space: nowrap;
+}
+.slider .thumb:active .caption {
+	display: flex;
+}
+.slider .input-type-range:focus + .thumb .caption {
+	display: flex;
+}
+.slider .input-type-range {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.slider .ruler {
+	margin: 10px 0px -5px 0px;
+	display: flex;
+	overflow: hidden;
+}
+.slider .ruler .ruler-rule {
+	border-left: solid 1px;
+	border-bottom: solid 1px;
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 1;
+	padding: 5px 0px;
+}
+.slider .ruler .ruler-rule:last-child {
+	border-right: solid 1px;
+}
+
+.slider .ruler .ruler-sub-rule {
+	border-left: solid 1px;
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 1;
+	padding: 3px 0px;
+	bottom: 0px;
+	margin-bottom: -5px;
+}
+.slider .ruler .ruler-sub-rule:first-child {
+	border-left: none;
+}
+
+.slider .labels {
+	display: flex;
+	justify-content: space-between;
+	padding: 0px;
+	margin-top: 10px;
+	margin-bottom: -20px;
+
+}
+.slider .label {
+	font-size: 80%;
+	display: flex;
+	width: 1px;
+	justify-content: center;
+}
+.slider .label:first-child {
+	justify-content: start;
+}
+.slider .label:last-child {
+	justify-content: end;
+}
+.slider.zero-ranage-margin .thumb-left {
+	right: 12px;
+}
+.slider.zero-ranage-margin .thumb-right {
+	left: 8px;
+}
+
+
+/* Disabled */
+.slider.disabled {
+	border: solid 1px rgb(200, 200, 200);
+	box-shadow: 1px 1px 4px rgb(180, 180, 180);
+	color:rgb(180, 180, 180);
+}
+.slider .bar {
+	display: flex;
+}
+.slider.disabled .bar-left {
+	background-color: #c9c9c9;
+	box-shadow: inset 0px 0px 5px rgb(160, 160, 160);
+}
+.slider.disabled .bar-right {
+	background-color: #c9c9c9;
+	box-shadow: inset 0px 0px 5px rgb(160, 160, 160);
+}
+.slider.disabled .bar-inner {
+	background-color: rgb(130 243 130);
+	border: solid 1px rgb(149, 149, 149);
+	box-shadow: inset 0px 0px 5px rgb(103, 103, 103);
+}
+.slider.disabled .thumb {
+	background-color: white;
+}
+.slider.disabled .thumb::before {
+	border: solid 1px rgb(200, 200, 200);
+	box-shadow: 0px 0px 3px rgb(35, 35, 35), inset 0px 0px 5px gray;
+}
+.slider.disabled .input-type-range:focus + .thumb::after {
+	border: dotted 1px rgb(35, 35, 35);
+	box-shadow: 0px 0px 5px white, inset 0px 0px 10px rgb(35, 35, 35);
+}
+.slider.disabled .thumb .caption * {
+	background-color: rgb(84, 84, 137);
+	color: rgb(199, 199, 199);
+	box-shadow: 0px 0px 5px rgb(35, 35, 35);
+}
+

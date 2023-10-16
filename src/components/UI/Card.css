@@ -1,0 +1,15 @@
+.card {
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);    
+    overflow: visible;
+}
+
+.card:hover {
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);    
+    transition: 0.5s;
+}
+
+/* .card > div {
+    padding: 8px;
+} */
